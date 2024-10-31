@@ -1,0 +1,87 @@
+[0.356s] Invoking command in '/home/gerardo/turtlebot3_ws/src/turtlebot3/turtlebot3_example': CMAKE_PREFIX_PATH=/home/gerardo/turtlebot3_ws/install/turtlebot3_msgs:/home/gerardo/turtlebot3_ws/install/turtlebot3:/home/gerardo/turtlebot3_ws/install/turtlebot3_bringup:/home/gerardo/turtlebot3_ws/install/turtlebot3_node:/home/gerardo/turtlebot3_ws/install/turtlebot3_navigation2:/home/gerardo/turtlebot3_ws/install/turtlebot3_description:/home/gerardo/turtlebot3_ws/install/turtlebot3_cartographer:/home/gerardo/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gerardo/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gerardo/turtlebot3_ws/install/dynamixel_sdk PYTHONPATH=/home/gerardo/turtlebot3_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build install --record /home/gerardo/turtlebot3_ws/build/turtlebot3_example/install.log --single-version-externally-managed install_data
+[0.490s] running egg_info
+[0.490s] creating ../../../build/turtlebot3_example/turtlebot3_example.egg-info
+[0.490s] writing ../../../build/turtlebot3_example/turtlebot3_example.egg-info/PKG-INFO
+[0.490s] writing dependency_links to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/dependency_links.txt
+[0.490s] writing entry points to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/entry_points.txt
+[0.490s] writing requirements to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/requires.txt
+[0.490s] writing top-level names to ../../../build/turtlebot3_example/turtlebot3_example.egg-info/top_level.txt
+[0.490s] writing manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[0.492s] reading manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[0.492s] writing manifest file '../../../build/turtlebot3_example/turtlebot3_example.egg-info/SOURCES.txt'
+[0.493s] running build
+[0.493s] running build_py
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example
+[0.493s] copying turtlebot3_example/__init__.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[0.493s] copying turtlebot3_example/turtlebot3_position_control/main.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[0.493s] copying turtlebot3_example/turtlebot3_position_control/__init__.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[0.493s] copying turtlebot3_example/turtlebot3_position_control/turtlebot3_path.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[0.493s] copying turtlebot3_example/turtlebot3_position_control/turtlebot3_position_control.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_client/main.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_client/__init__.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_client/turtlebot3_patrol_client.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_server/main.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_server/__init__.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_server/turtlebot3_patrol_server.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server
+[0.493s] copying turtlebot3_example/turtlebot3_patrol_server/turtlebot3_path.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server
+[0.493s] creating /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[0.493s] copying turtlebot3_example/turtlebot3_obstacle_detection/main.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[0.493s] copying turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[0.493s] copying turtlebot3_example/turtlebot3_obstacle_detection/__init__.py -> /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection
+[0.494s] running install
+[0.495s] running install_lib
+[0.495s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example
+[0.496s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control/main.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control/__init__.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control/turtlebot3_path.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_position_control/turtlebot3_position_control.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/__init__.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example
+[0.496s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client/main.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client/__init__.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_client/turtlebot3_patrol_client.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client
+[0.496s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server/main.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server/__init__.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server/turtlebot3_patrol_server.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_patrol_server/turtlebot3_path.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server
+[0.496s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection/main.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[0.496s] copying /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build/lib/turtlebot3_example/turtlebot3_obstacle_detection/__init__.py -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection
+[0.496s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control/main.py to main.cpython-310.pyc
+[0.497s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control/__init__.py to __init__.cpython-310.pyc
+[0.497s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control/turtlebot3_path.py to turtlebot3_path.cpython-310.pyc
+[0.497s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_position_control/turtlebot3_position_control.py to turtlebot3_position_control.cpython-310.pyc
+[0.497s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/__init__.py to __init__.cpython-310.pyc
+[0.498s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client/main.py to main.cpython-310.pyc
+[0.498s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client/__init__.py to __init__.cpython-310.pyc
+[0.498s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_client/turtlebot3_patrol_client.py to turtlebot3_patrol_client.cpython-310.pyc
+[0.498s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server/main.py to main.cpython-310.pyc
+[0.498s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server/__init__.py to __init__.cpython-310.pyc
+[0.498s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server/turtlebot3_patrol_server.py to turtlebot3_patrol_server.cpython-310.pyc
+[0.499s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_patrol_server/turtlebot3_path.py to turtlebot3_path.cpython-310.pyc
+[0.499s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection/main.py to main.cpython-310.pyc
+[0.499s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection/turtlebot3_obstacle_detection.py to turtlebot3_obstacle_detection.cpython-310.pyc
+[0.499s] byte-compiling /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example/turtlebot3_obstacle_detection/__init__.py to __init__.cpython-310.pyc
+[0.499s] running install_data
+[0.499s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/share/ament_index
+[0.499s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index
+[0.499s] creating /home/gerardo/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[0.499s] copying resource/turtlebot3_example -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/share/ament_index/resource_index/packages
+[0.499s] copying package.xml -> /home/gerardo/turtlebot3_ws/install/turtlebot3_example/share/turtlebot3_example
+[0.499s] running install_egg_info
+[0.501s] Copying ../../../build/turtlebot3_example/turtlebot3_example.egg-info to /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3_example-2.1.5-py3.10.egg-info
+[0.501s] running install_scripts
+[0.514s] Installing turtlebot3_obstacle_detection script to /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.514s] Installing turtlebot3_patrol_client script to /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.514s] Installing turtlebot3_patrol_server script to /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.514s] Installing turtlebot3_position_control script to /home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[0.515s] writing list of installed files to '/home/gerardo/turtlebot3_ws/build/turtlebot3_example/install.log'
+[0.529s] Invoked command in '/home/gerardo/turtlebot3_ws/src/turtlebot3/turtlebot3_example' returned '0': CMAKE_PREFIX_PATH=/home/gerardo/turtlebot3_ws/install/turtlebot3_msgs:/home/gerardo/turtlebot3_ws/install/turtlebot3:/home/gerardo/turtlebot3_ws/install/turtlebot3_bringup:/home/gerardo/turtlebot3_ws/install/turtlebot3_node:/home/gerardo/turtlebot3_ws/install/turtlebot3_navigation2:/home/gerardo/turtlebot3_ws/install/turtlebot3_description:/home/gerardo/turtlebot3_ws/install/turtlebot3_cartographer:/home/gerardo/turtlebot3_ws/install/dynamixel_sdk_examples:/home/gerardo/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/gerardo/turtlebot3_ws/install/dynamixel_sdk PYTHONPATH=/home/gerardo/turtlebot3_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/turtlebot3_example build --build-base /home/gerardo/turtlebot3_ws/build/turtlebot3_example/build install --record /home/gerardo/turtlebot3_ws/build/turtlebot3_example/install.log --single-version-externally-managed install_data
