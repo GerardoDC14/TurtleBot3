@@ -1,0 +1,20 @@
+[0.744s] Invoking command in '/home/gerardo/turtlebot3_group6v2/src/joint_state_publisher_custom': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_publisher_custom build --build-base /home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/build install --record /home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/install.log --single-version-externally-managed
+[0.871s] running egg_info
+[0.871s] writing ../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/PKG-INFO
+[0.872s] writing dependency_links to ../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/dependency_links.txt
+[0.872s] writing entry points to ../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/entry_points.txt
+[0.872s] writing requirements to ../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/requires.txt
+[0.872s] writing top-level names to ../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/top_level.txt
+[0.873s] reading manifest file '../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/SOURCES.txt'
+[0.873s] writing manifest file '../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info/SOURCES.txt'
+[0.873s] running build
+[0.873s] running build_py
+[0.873s] running install
+[0.875s] running install_lib
+[0.876s] running install_egg_info
+[0.877s] removing '/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom/lib/python3.10/site-packages/joint_state_publisher_custom-0.0.0-py3.10.egg-info' (and everything under it)
+[0.877s] Copying ../../build/joint_state_publisher_custom/joint_state_publisher_custom.egg-info to /home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom/lib/python3.10/site-packages/joint_state_publisher_custom-0.0.0-py3.10.egg-info
+[0.877s] running install_scripts
+[0.890s] Installing joint_state_publisher script to /home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom/lib/joint_state_publisher_custom
+[0.890s] writing list of installed files to '/home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/install.log'
+[0.908s] Invoked command in '/home/gerardo/turtlebot3_group6v2/src/joint_state_publisher_custom' returned '0': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/joint_state_publisher_custom build --build-base /home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/build install --record /home/gerardo/turtlebot3_group6v2/build/joint_state_publisher_custom/install.log --single-version-externally-managed
