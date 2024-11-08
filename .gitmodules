@@ -1,0 +1,3 @@
+[submodule "src/HAZMAT_Detection"]
+	path = src/HAZMAT_Detection
+	url = https://github.com/alonsorc9/HAZMAT_Detection.git
