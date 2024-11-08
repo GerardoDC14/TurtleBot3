@@ -1,0 +1,31 @@
+[0.025s] Invoking command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/gerardo/turtlebot3_group6v2/build/explore_cpp -- -j16 -l16
+[0.633s] [35m[1mConsolidate compiler generated dependencies of target explore_node[0m
+[0.633s] [ 50%] [32mBuilding CXX object CMakeFiles/explore_node.dir/src/explore_node.cpp.o[0m
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:826:40:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::analyze_map(const OccupancyGrid&)[m[K’
+[2.496s]   826 | std::vector<std::pair<double, double>> [01;31m[KExploreNode[m[K::analyze_map(const nav_msgs::msg::OccupancyGrid &map_data)
+[2.496s]       |                                        [01;31m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:251:40:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::analyze_map(const OccupancyGrid&)[m[K’ previously defined here
+[2.496s]   251 | std::vector<std::pair<double, double>> [01;36m[KExploreNode[m[K::analyze_map(const nav_msgs::msg::OccupancyGrid &map_data)
+[2.496s]       |                                        [01;36m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:878:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kbool ExploreNode::is_goal_position_valid(const PoseStamped&)[m[K’
+[2.496s]   878 | bool [01;31m[KExploreNode[m[K::is_goal_position_valid(const geometry_msgs::msg::PoseStamped &goal_pose)
+[2.496s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:774:6:[m[K [01;36m[Knote: [m[K‘[01m[Kbool ExploreNode::is_goal_position_valid(const PoseStamped&)[m[K’ previously defined here
+[2.496s]   774 | bool [01;36m[KExploreNode[m[K::is_goal_position_valid(const geometry_msgs::msg::PoseStamped &goal_pose)
+[2.496s]       |      [01;36m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:913:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid ExploreNode::mark_frontier_as_invalid(const std::pair<double, double>&)[m[K’
+[2.496s]   913 | void [01;31m[KExploreNode[m[K::mark_frontier_as_invalid(const std::pair<double, double> &coord)
+[2.496s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:809:6:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid ExploreNode::mark_frontier_as_invalid(const std::pair<double, double>&)[m[K’ previously defined here
+[2.496s]   809 | void [01;36m[KExploreNode[m[K::mark_frontier_as_invalid(const std::pair<double, double> &coord)
+[2.496s]       |      [01;36m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:922:21:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstd::pair<int, int> ExploreNode::round_coord(const std::pair<double, double>&, int)[m[K’
+[2.496s]   922 | std::pair<int, int> [01;31m[KExploreNode[m[K::round_coord(const std::pair<double, double> &coord, int precision)
+[2.496s]       |                     [01;31m[K^~~~~~~~~~~[m[K
+[2.496s] [01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:818:21:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::pair<int, int> ExploreNode::round_coord(const std::pair<double, double>&, int)[m[K’ previously defined here
+[2.496s]   818 | std::pair<int, int> [01;36m[KExploreNode[m[K::round_coord(const std::pair<double, double> &coord, int precision)
+[2.496s]       |                     [01;36m[K^~~~~~~~~~~[m[K
+[3.977s] gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+[3.977s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+[3.978s] gmake: *** [Makefile:146: all] Error 2
+[3.980s] Invoked command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/gerardo/turtlebot3_group6v2/build/explore_cpp -- -j16 -l16

@@ -1,0 +1,37 @@
+[1.419s] Invoking command in '/home/gerardo/turtlebot3_group6v2/src/hazmat_marker': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hazmat_marker build --build-base /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build install --record /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/install.log --single-version-externally-managed install_data
+[1.576s] running egg_info
+[1.577s] creating ../build/hazmat_marker/hazmat_marker.egg-info
+[1.577s] writing ../build/hazmat_marker/hazmat_marker.egg-info/PKG-INFO
+[1.577s] writing dependency_links to ../build/hazmat_marker/hazmat_marker.egg-info/dependency_links.txt
+[1.577s] writing entry points to ../build/hazmat_marker/hazmat_marker.egg-info/entry_points.txt
+[1.577s] writing requirements to ../build/hazmat_marker/hazmat_marker.egg-info/requires.txt
+[1.577s] writing top-level names to ../build/hazmat_marker/hazmat_marker.egg-info/top_level.txt
+[1.577s] writing manifest file '../build/hazmat_marker/hazmat_marker.egg-info/SOURCES.txt'
+[1.578s] reading manifest file '../build/hazmat_marker/hazmat_marker.egg-info/SOURCES.txt'
+[1.579s] writing manifest file '../build/hazmat_marker/hazmat_marker.egg-info/SOURCES.txt'
+[1.579s] running build
+[1.579s] running build_py
+[1.579s] creating /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build
+[1.579s] creating /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build/lib
+[1.579s] creating /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build/lib/hazmat_marker
+[1.579s] copying hazmat_marker/__init__.py -> /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build/lib/hazmat_marker
+[1.579s] copying hazmat_marker/hazmat_marker.py -> /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build/lib/hazmat_marker
+[1.579s] running install
+[1.581s] running install_lib
+[1.581s] creating /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages/hazmat_marker
+[1.581s] copying /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build/lib/hazmat_marker/__init__.py -> /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages/hazmat_marker
+[1.581s] copying /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build/lib/hazmat_marker/hazmat_marker.py -> /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages/hazmat_marker
+[1.581s] byte-compiling /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages/hazmat_marker/__init__.py to __init__.cpython-310.pyc
+[1.582s] byte-compiling /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages/hazmat_marker/hazmat_marker.py to hazmat_marker.cpython-310.pyc
+[1.582s] running install_data
+[1.582s] creating /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/share/ament_index
+[1.582s] creating /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/share/ament_index/resource_index
+[1.582s] creating /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/share/ament_index/resource_index/packages
+[1.582s] copying resource/hazmat_marker -> /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/share/ament_index/resource_index/packages
+[1.582s] copying package.xml -> /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/share/hazmat_marker
+[1.583s] running install_egg_info
+[1.583s] Copying ../build/hazmat_marker/hazmat_marker.egg-info to /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages/hazmat_marker-0.1.0-py3.10.egg-info
+[1.584s] running install_scripts
+[1.599s] Installing hazmat_marker script to /home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/hazmat_marker
+[1.599s] writing list of installed files to '/home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/install.log'
+[1.622s] Invoked command in '/home/gerardo/turtlebot3_group6v2/src/hazmat_marker' returned '0': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/src/install/hazmat_marker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/hazmat_marker build --build-base /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/build install --record /home/gerardo/turtlebot3_group6v2/src/build/hazmat_marker/install.log --single-version-externally-managed install_data

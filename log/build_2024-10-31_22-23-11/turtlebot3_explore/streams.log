@@ -1,0 +1,21 @@
+[1.049s] Invoking command in '/home/gerardo/turtlebot3_group6v2/src/turtlebot3_explore': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_explore build --build-base /home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/build install --record /home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/install.log --single-version-externally-managed install_data
+[1.202s] running egg_info
+[1.202s] writing ../../build/turtlebot3_explore/turtlebot3_explore.egg-info/PKG-INFO
+[1.202s] writing dependency_links to ../../build/turtlebot3_explore/turtlebot3_explore.egg-info/dependency_links.txt
+[1.202s] writing entry points to ../../build/turtlebot3_explore/turtlebot3_explore.egg-info/entry_points.txt
+[1.203s] writing requirements to ../../build/turtlebot3_explore/turtlebot3_explore.egg-info/requires.txt
+[1.203s] writing top-level names to ../../build/turtlebot3_explore/turtlebot3_explore.egg-info/top_level.txt
+[1.204s] reading manifest file '../../build/turtlebot3_explore/turtlebot3_explore.egg-info/SOURCES.txt'
+[1.204s] writing manifest file '../../build/turtlebot3_explore/turtlebot3_explore.egg-info/SOURCES.txt'
+[1.204s] running build
+[1.204s] running build_py
+[1.204s] running install
+[1.206s] running install_lib
+[1.208s] running install_data
+[1.208s] running install_egg_info
+[1.209s] removing '/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore/lib/python3.10/site-packages/turtlebot3_explore-0.0.1-py3.10.egg-info' (and everything under it)
+[1.209s] Copying ../../build/turtlebot3_explore/turtlebot3_explore.egg-info to /home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore/lib/python3.10/site-packages/turtlebot3_explore-0.0.1-py3.10.egg-info
+[1.210s] running install_scripts
+[1.226s] Installing explore script to /home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore/lib/turtlebot3_explore
+[1.227s] writing list of installed files to '/home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/install.log'
+[1.250s] Invoked command in '/home/gerardo/turtlebot3_group6v2/src/turtlebot3_explore' returned '0': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_explore build --build-base /home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/build install --record /home/gerardo/turtlebot3_group6v2/build/turtlebot3_explore/install.log --single-version-externally-managed install_data

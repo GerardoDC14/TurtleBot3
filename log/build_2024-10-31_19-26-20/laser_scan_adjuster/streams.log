@@ -1,0 +1,37 @@
+[0.986s] Invoking command in '/home/gerardo/turtlebot3_group6v2/src/laser_scan_adjuster': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/laser_scan_adjuster build --build-base /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build install --record /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/install.log --single-version-externally-managed install_data
+[1.132s] running egg_info
+[1.132s] creating ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info
+[1.133s] writing ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/PKG-INFO
+[1.133s] writing dependency_links to ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/dependency_links.txt
+[1.133s] writing entry points to ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/entry_points.txt
+[1.133s] writing requirements to ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/requires.txt
+[1.133s] writing top-level names to ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/top_level.txt
+[1.133s] writing manifest file '../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/SOURCES.txt'
+[1.134s] reading manifest file '../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/SOURCES.txt'
+[1.134s] writing manifest file '../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info/SOURCES.txt'
+[1.134s] running build
+[1.134s] running build_py
+[1.134s] creating /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build
+[1.134s] creating /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build/lib
+[1.135s] creating /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build/lib/laser_scan_adjuster
+[1.135s] copying laser_scan_adjuster/__init__.py -> /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build/lib/laser_scan_adjuster
+[1.135s] copying laser_scan_adjuster/adjust_scan.py -> /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build/lib/laser_scan_adjuster
+[1.135s] running install
+[1.136s] running install_lib
+[1.137s] creating /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages/laser_scan_adjuster
+[1.137s] copying /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build/lib/laser_scan_adjuster/__init__.py -> /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages/laser_scan_adjuster
+[1.137s] copying /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build/lib/laser_scan_adjuster/adjust_scan.py -> /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages/laser_scan_adjuster
+[1.137s] byte-compiling /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages/laser_scan_adjuster/__init__.py to __init__.cpython-310.pyc
+[1.138s] byte-compiling /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages/laser_scan_adjuster/adjust_scan.py to adjust_scan.cpython-310.pyc
+[1.138s] running install_data
+[1.138s] creating /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/share/ament_index
+[1.138s] creating /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/share/ament_index/resource_index
+[1.138s] creating /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/share/ament_index/resource_index/packages
+[1.138s] copying resource/laser_scan_adjuster -> /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/share/ament_index/resource_index/packages
+[1.138s] copying package.xml -> /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/share/laser_scan_adjuster
+[1.138s] running install_egg_info
+[1.140s] Copying ../../build/laser_scan_adjuster/laser_scan_adjuster.egg-info to /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages/laser_scan_adjuster-0.0.0-py3.10.egg-info
+[1.140s] running install_scripts
+[1.154s] Installing adjust_scan script to /home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/laser_scan_adjuster
+[1.154s] writing list of installed files to '/home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/install.log'
+[1.189s] Invoked command in '/home/gerardo/turtlebot3_group6v2/src/laser_scan_adjuster' returned '0': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/laser_scan_adjuster build --build-base /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/build install --record /home/gerardo/turtlebot3_group6v2/build/laser_scan_adjuster/install.log --single-version-externally-managed install_data

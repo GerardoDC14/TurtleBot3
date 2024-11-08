@@ -1,0 +1,17 @@
+[35m[1mConsolidate compiler generated dependencies of target explore_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/explore_node.dir/src/explore_node.cpp.o[0m
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::analyze_map(const OccupancyGrid&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:262:88:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K.[m[K’ token
+  262 |     cv::Mat map_mat_s8(height, width, CV_8S, const_cast<int8_t*>(map_data.data.data()))[01;31m[K.[m[Kclone();
+      |                                                                                        [01;31m[K^[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<int> ExploreNode::find_frontiers(const OccupancyGrid&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:535:88:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K.[m[K’ token
+  535 |     cv::Mat map_mat_s8(height, width, CV_8S, const_cast<int8_t*>(map_data.data.data()))[01;31m[K.[m[Kclone();
+      |                                                                                        [01;31m[K^[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kdouble ExploreNode::information_gain(const std::pair<double, double>&, double)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:786:52:[m[K [01;31m[Kerror: [m[Kinvalid ‘[01m[Kconst_cast[m[K’ from type ‘[01m[Ksigned char*[m[K’ to type ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’}
+  786 |     cv::Mat submap = cv::Mat(height, width, CV_8U, [01;31m[Kconst_cast<uint8_t*>(latest_map_->data.data())[m[K)
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

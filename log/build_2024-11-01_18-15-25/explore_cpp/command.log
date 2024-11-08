@@ -1,0 +1,2 @@
+Invoking command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp': /usr/bin/cmake --build /home/gerardo/turtlebot3_group6v2/build/explore_cpp -- -j16 -l16
+Invoked command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp' returned '2': /usr/bin/cmake --build /home/gerardo/turtlebot3_group6v2/build/explore_cpp -- -j16 -l16

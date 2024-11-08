@@ -1,0 +1,72 @@
+[0.009s] Invoking command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_ws/install/turtlebot3_explore:/home/gerardo/turtlebot3_ws/install/motor_position_controller:/home/gerardo/turtlebot3_ws/install/laser_scan_adjuster:/home/gerardo/turtlebot3_ws/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake /home/gerardo/turtlebot3_group6v2/src/explore_cpp -DCMAKE_INSTALL_PREFIX=/home/gerardo/turtlebot3_group6v2/install/explore_cpp
+[0.045s] -- The C compiler identification is GNU 11.4.0
+[0.082s] -- The CXX compiler identification is GNU 11.4.0
+[0.087s] -- Detecting C compiler ABI info
+[0.141s] -- Detecting C compiler ABI info - done
+[0.146s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.146s] -- Detecting C compile features
+[0.146s] -- Detecting C compile features - done
+[0.148s] -- Detecting CXX compiler ABI info
+[0.207s] -- Detecting CXX compiler ABI info - done
+[0.211s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.211s] -- Detecting CXX compile features
+[0.212s] -- Detecting CXX compile features - done
+[0.214s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.559s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.627s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.659s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.663s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.669s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.678s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.689s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.722s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.725s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.798s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.819s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.847s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.854s] -- Looking for pthread.h
+[0.906s] -- Looking for pthread.h - found
+[0.907s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.964s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.965s] -- Found Threads: TRUE  
+[0.998s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.015s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.038s] -- Found tf2_ros: 0.25.8 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.100s] -- Found tf2_geometry_msgs: 0.25.8 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.110s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.111s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.111s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.113s] -- Found nav2_msgs: 1.1.16 (/opt/ros/humble/share/nav2_msgs/cmake)
+[1.131s] -- Found OpenCV: /usr (found version "4.5.4") 
+[1.138s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.179s] -- Configuring done
+[1.188s] -- Generating done
+[1.189s] -- Build files have been written to: /home/gerardo/turtlebot3_group6v2/build/explore_cpp
+[1.197s] Invoked command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_ws/install/turtlebot3_explore:/home/gerardo/turtlebot3_ws/install/motor_position_controller:/home/gerardo/turtlebot3_ws/install/laser_scan_adjuster:/home/gerardo/turtlebot3_ws/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake /home/gerardo/turtlebot3_group6v2/src/explore_cpp -DCMAKE_INSTALL_PREFIX=/home/gerardo/turtlebot3_group6v2/install/explore_cpp
+[1.197s] Invoking command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_ws/install/turtlebot3_explore:/home/gerardo/turtlebot3_ws/install/motor_position_controller:/home/gerardo/turtlebot3_ws/install/laser_scan_adjuster:/home/gerardo/turtlebot3_ws/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/gerardo/turtlebot3_group6v2/build/explore_cpp -- -j16 -l16
+[1.227s] [35m[1mConsolidate compiler generated dependencies of target explore_node[0m
+[1.241s] [ 50%] [32mBuilding CXX object CMakeFiles/explore_node.dir/src/explore_node.cpp.o[0m
+[8.111s] [100%] [32m[1mLinking CXX executable explore_node[0m
+[8.475s] [100%] Built target explore_node
+[8.485s] Invoked command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_ws/install/turtlebot3_explore:/home/gerardo/turtlebot3_ws/install/motor_position_controller:/home/gerardo/turtlebot3_ws/install/laser_scan_adjuster:/home/gerardo/turtlebot3_ws/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake --build /home/gerardo/turtlebot3_group6v2/build/explore_cpp -- -j16 -l16
+[8.507s] Invoking command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_ws/install/turtlebot3_explore:/home/gerardo/turtlebot3_ws/install/motor_position_controller:/home/gerardo/turtlebot3_ws/install/laser_scan_adjuster:/home/gerardo/turtlebot3_ws/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake --install /home/gerardo/turtlebot3_group6v2/build/explore_cpp
+[8.512s] -- Install configuration: ""
+[8.512s] -- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/lib/explore_cpp/explore_node
+[8.514s] -- Set runtime path of "/home/gerardo/turtlebot3_group6v2/install/explore_cpp/lib/explore_cpp/explore_node" to ""
+[8.514s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/package.xml
+[8.514s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/ament_index/resource_index/package_run_dependencies/explore_cpp
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/ament_index/resource_index/parent_prefix_path/explore_cpp
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/ament_prefix_path.sh
+[8.515s] -- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/ament_prefix_path.dsv
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/path.sh
+[8.515s] -- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/path.dsv
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.bash
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.sh
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.zsh
+[8.515s] -- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.dsv
+[8.515s] -- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/package.dsv
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/ament_index/resource_index/packages/explore_cpp
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/cmake/explore_cppConfig.cmake
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/cmake/explore_cppConfig-version.cmake
+[8.515s] -- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/package.xml
+[8.516s] Invoked command in '/home/gerardo/turtlebot3_group6v2/build/explore_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gerardo/turtlebot3_ws/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_ws/install/turtlebot3_explore:/home/gerardo/turtlebot3_ws/install/motor_position_controller:/home/gerardo/turtlebot3_ws/install/laser_scan_adjuster:/home/gerardo/turtlebot3_ws/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_poi_navigation:/home/gerardo/turtlebot3_group6v2/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6v2/install/motor_position_controller:/home/gerardo/turtlebot3_group6v2/install/laser_scan_adjuster:/home/gerardo/turtlebot3_group6v2/install/joint_state_publisher_custom:/home/gerardo/turtlebot3_ws/install/turtlebot3_teleop:/home/gerardo/turtlebot3_ws/install/turtlebot3_example:/home/gerardo/turtlebot3_group6/install/turtlebot3_explore:/home/gerardo/turtlebot3_group6/install/motor_controller:/opt/ros/humble /usr/bin/cmake --install /home/gerardo/turtlebot3_group6v2/build/explore_cpp

@@ -1,0 +1,13 @@
+[35m[1mConsolidate compiler generated dependencies of target explore_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/explore_node.dir/src/explore_node.cpp.o[0m
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:818:91:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ at end of input
+  818 | std::pair<int, int> ExploreNode::round_coord(const std::pair<double, double> &coord, int p
+      |                                                                                           [01;31m[K^[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:818:91:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ at end of input
+  818 | std::pair<int, int> ExploreNode::round_coord[34m[K([m[Kconst std::pair<double, double> &coord, int p
+      |                                             [34m[K~[m[K                                             [01;31m[K^[m[K
+      |                                                                                           [32m[K)[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:818:91:[m[K [01;31m[Kerror: [m[Kexpected initializer at end of input
+gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

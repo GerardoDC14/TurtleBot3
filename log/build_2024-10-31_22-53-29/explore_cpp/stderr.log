@@ -1,0 +1,17 @@
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:266:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid ExploreNode::add_revisit_point_if_needed(double, double)[m[K’
+  266 | void [01;31m[KExploreNode[m[K::add_revisit_point_if_needed(double x, double y)
+      |      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:266:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid ExploreNode::add_revisit_point_if_needed(double, double)[m[K’
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:27:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass ExploreNode[m[K’ defined here
+   27 | class [01;36m[KExploreNode[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kvoid ExploreNode::exploration_cycle()[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:348:14:[m[K [01;31m[Kerror: [m[K‘[01m[Krevisit_points_[m[K’ was not declared in this scope
+  348 |         if (![01;31m[Krevisit_points_[m[K.empty())
+      |              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:416:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kadd_revisit_point_if_needed[m[K’ was not declared in this scope
+  416 |     [01;31m[Kadd_revisit_point_if_needed[m[K(current_pose->pose.position.x, current_pose->pose.position.y);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

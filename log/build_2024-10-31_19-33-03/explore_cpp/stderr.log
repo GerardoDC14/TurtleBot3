@@ -1,0 +1,15 @@
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kvoid ExploreNode::exploration_cycle()[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:185:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalculate_goal_pose[m[K’ was not declared in this scope
+  185 |         auto goal_pose = [01;31m[Kcalculate_goal_pose[m[K(selected_coord, *current_pose);
+      |                          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K At global scope:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:547:44:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr ExploreNode::calculate_goal_pose(const std::pair<double, double>&, const PoseStamped&)[m[K’
+  547 | geometry_msgs::msg::PoseStamped::SharedPtr [01;31m[KExploreNode[m[K::calculate_goal_pose(
+      |                                            [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:547:44:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >::SharedPtr ExploreNode::calculate_goal_pose(const std::pair<double, double>&, const PoseStamped&)[m[K’
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:26:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass ExploreNode[m[K’ defined here
+   26 | class [01;36m[KExploreNode[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

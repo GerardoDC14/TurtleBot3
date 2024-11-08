@@ -1,0 +1,32 @@
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::analyze_map(const OccupancyGrid&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:262:85:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K.[m[K’ token
+  262 |     cv::Mat map_mat(height, width, CV_8S, const_cast<int8_t*>(map_data.data.data()))[01;31m[K.[m[Kclone();
+      |                                                                                     [01;31m[K^[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K At global scope:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:826:40:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::analyze_map(const OccupancyGrid&)[m[K’
+  826 | std::vector<std::pair<double, double>> [01;31m[KExploreNode[m[K::analyze_map(const nav_msgs::msg::OccupancyGrid &map_data)
+      |                                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:251:40:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::analyze_map(const OccupancyGrid&)[m[K’ previously defined here
+  251 | std::vector<std::pair<double, double>> [01;36m[KExploreNode[m[K::analyze_map(const nav_msgs::msg::OccupancyGrid &map_data)
+      |                                        [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:878:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kbool ExploreNode::is_goal_position_valid(const PoseStamped&)[m[K’
+  878 | bool [01;31m[KExploreNode[m[K::is_goal_position_valid(const geometry_msgs::msg::PoseStamped &goal_pose)
+      |      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:774:6:[m[K [01;36m[Knote: [m[K‘[01m[Kbool ExploreNode::is_goal_position_valid(const PoseStamped&)[m[K’ previously defined here
+  774 | bool [01;36m[KExploreNode[m[K::is_goal_position_valid(const geometry_msgs::msg::PoseStamped &goal_pose)
+      |      [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:913:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid ExploreNode::mark_frontier_as_invalid(const std::pair<double, double>&)[m[K’
+  913 | void [01;31m[KExploreNode[m[K::mark_frontier_as_invalid(const std::pair<double, double> &coord)
+      |      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:809:6:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid ExploreNode::mark_frontier_as_invalid(const std::pair<double, double>&)[m[K’ previously defined here
+  809 | void [01;36m[KExploreNode[m[K::mark_frontier_as_invalid(const std::pair<double, double> &coord)
+      |      [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:922:21:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstd::pair<int, int> ExploreNode::round_coord(const std::pair<double, double>&, int)[m[K’
+  922 | std::pair<int, int> [01;31m[KExploreNode[m[K::round_coord(const std::pair<double, double> &coord, int precision)
+      |                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:818:21:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::pair<int, int> ExploreNode::round_coord(const std::pair<double, double>&, int)[m[K’ previously defined here
+  818 | std::pair<int, int> [01;36m[KExploreNode[m[K::round_coord(const std::pair<double, double> &coord, int precision)
+      |                     [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,9 @@
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:725:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kbool ExploreNode::assess_map_stability(const SharedPtr&)[m[K’
+  725 | bool [01;31m[KExploreNode[m[K::assess_map_stability(const nav_msgs::msg::OccupancyGrid::SharedPtr &msg)
+      |      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:229:6:[m[K [01;36m[Knote: [m[K‘[01m[Kbool ExploreNode::assess_map_stability(const SharedPtr&)[m[K’ previously defined here
+  229 | bool [01;36m[KExploreNode[m[K::assess_map_stability(const nav_msgs::msg::OccupancyGrid::SharedPtr &msg)
+      |      [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/explore_node.dir/build.make:76: CMakeFiles/explore_node.dir/src/explore_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/explore_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

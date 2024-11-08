@@ -1,0 +1,10 @@
+[0.000000] (-) TimerEvent: {}
+[0.000242] (-) JobUnselected: {'identifier': 'camara'}
+[0.000337] (-) JobUnselected: {'identifier': 'explore_cpp'}
+[0.000356] (-) JobUnselected: {'identifier': 'hazmat_marker'}
+[0.000372] (-) JobUnselected: {'identifier': 'joint_state_publisher_custom'}
+[0.000388] (-) JobUnselected: {'identifier': 'laser_scan_adjuster'}
+[0.000403] (-) JobUnselected: {'identifier': 'motor_position_controller'}
+[0.000418] (-) JobUnselected: {'identifier': 'turtlebot3_explore'}
+[0.000433] (-) JobUnselected: {'identifier': 'turtlebot3_poi_navigation'}
+[0.000448] (-) EventReactorShutdown: {}
