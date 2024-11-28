@@ -1,0 +1,8 @@
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::vector<std::pair<int, int> > > ExploreNode::find_frontiers(const OccupancyGrid&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:486:37:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<std::pair<int, int> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  486 |                 if ([01;35m[Kfrontier.size() >= min_frontier_size_[m[K)
+      |                     [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::get_frontier_centroids(const std::vector<std::vector<std::pair<int, int> > >&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:502:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kwidth[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  502 |     int [01;35m[Kwidth[m[K = latest_map_->info.width;
+      |         [01;35m[K^~~~~[m[K

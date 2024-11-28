@@ -3,7 +3,6 @@
 #include <rclcpp/rclcpp.hpp>
 #include <nav_msgs/msg/occupancy_grid.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
-#include <geometry_msgs/msg/twist.hpp>
 #include <nav2_msgs/action/navigate_to_pose.hpp>
 #include <visualization_msgs/msg/marker.hpp>
 #include <visualization_msgs/msg/marker_array.hpp>
@@ -11,7 +10,6 @@
 #include <tf2_ros/buffer.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <rclcpp_action/rclcpp_action.hpp>
-#include <opencv2/opencv.hpp>
 #include <cmath>
 #include <vector>
 #include <map>
@@ -20,6 +18,8 @@
 #include <string>
 #include <chrono>
 #include <tf2/LinearMath/Quaternion.h>
+#include <mutex>
+#include <queue>
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
@@ -59,6 +59,7 @@ private:
 
     // Latest map data
     nav_msgs::msg::OccupancyGrid::SharedPtr latest_map_;
+    std::mutex map_mutex_; // Mutex for thread safety
 
     // Tracking visited frontiers
     std::vector<std::pair<double, double>> visited_frontiers_;
@@ -73,8 +74,8 @@ private:
     void exploration_cycle();
     void send_goal(const geometry_msgs::msg::PoseStamped::SharedPtr goal_pose);
     geometry_msgs::msg::PoseStamped::SharedPtr get_current_pose();
-    std::vector<int> find_frontiers(const nav_msgs::msg::OccupancyGrid &map_data);
-    std::vector<std::pair<double, double>> get_frontier_coords(const std::vector<int> &frontier_indices);
+    std::vector<std::vector<std::pair<int, int>>> find_frontiers(const nav_msgs::msg::OccupancyGrid &map_data);
+    std::vector<std::pair<double, double>> get_frontier_centroids(const std::vector<std::vector<std::pair<int, int>>> &frontiers);
     void publish_frontiers(const std::vector<std::pair<double, double>> &frontier_coords);
     std::vector<std::pair<double, double>> filter_frontiers(const std::vector<std::pair<double, double>> &frontier_coords);
     bool is_frontier_visited(const std::pair<double, double> &coord);
@@ -98,11 +99,11 @@ ExploreNode::ExploreNode()
       tf_listener_(tf_buffer_)
 {
     // Declare parameters with adjusted default values
-    this->declare_parameter<double>("info_radius", 1.0);
-    this->declare_parameter<double>("frontier_visit_threshold", 0.05); // Reduced to prevent premature exclusion
+    this->declare_parameter<double>("info_radius", 2.0); // Increased to encourage exploration of larger frontiers
+    this->declare_parameter<double>("frontier_visit_threshold", 0.01); // Decreased to prevent premature exclusion
     this->declare_parameter<int>("max_attempts", 20);
     this->declare_parameter<double>("timer_interval", 2.0);
-    this->declare_parameter<int>("min_frontier_size", 1); // Include small frontiers
+    this->declare_parameter<int>("min_frontier_size", 15); // Increased to focus on significant frontiers
     this->declare_parameter<int>("free_threshold", 25);    // Adjusted threshold for free cells
     this->declare_parameter<int>("occupied_threshold", 65); // Adjusted threshold for occupied cells
 
@@ -190,28 +191,9 @@ geometry_msgs::msg::PoseStamped::SharedPtr ExploreNode::calculate_goal_pose(
 // Callback for map updates
 void ExploreNode::map_callback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg)
 {
+    std::lock_guard<std::mutex> lock(map_mutex_);
     latest_map_ = msg;
     RCLCPP_DEBUG(this->get_logger(), "Map update received.");
-
-    // Log map statistics
-    int total_cells = msg->info.width * msg->info.height;
-    int known_cells = 0, free_cells = 0, occupied_cells = 0;
-    for (const auto &cell : msg->data)
-    {
-        if (cell != -1) { // Known cells
-            known_cells++;
-            if (cell >= 0 && cell <= free_threshold_)
-                free_cells++;
-            else if (cell >= occupied_threshold_) // Occupied threshold
-                occupied_cells++;
-        }
-    }
-    double known_ratio = static_cast<double>(known_cells) / total_cells;
-    double free_ratio = static_cast<double>(free_cells) / total_cells;
-    double occupied_ratio = static_cast<double>(occupied_cells) / total_cells;
-
-    RCLCPP_INFO(this->get_logger(), "Map Stats - Total: %d, Known: %d (%.2f%%), Free: %d (%.2f%%), Occupied: %d (%.2f%%)",
-                total_cells, known_cells, known_ratio * 100.0, free_cells, free_ratio * 100.0, occupied_cells, occupied_ratio * 100.0);
 }
 
 // Exploration cycle
@@ -219,13 +201,13 @@ void ExploreNode::exploration_cycle()
 {
     RCLCPP_INFO(this->get_logger(), "Starting exploration cycle...");
 
-    if (navigation_in_progress_)
+    nav_msgs::msg::OccupancyGrid::SharedPtr local_map;
     {
-        RCLCPP_DEBUG(this->get_logger(), "Navigation is still in progress.");
-        return;
+        std::lock_guard<std::mutex> lock(map_mutex_);
+        local_map = latest_map_;
     }
 
-    if (latest_map_ == nullptr)
+    if (local_map == nullptr)
     {
         RCLCPP_DEBUG(this->get_logger(), "Waiting for map data...");
         return;
@@ -238,18 +220,41 @@ void ExploreNode::exploration_cycle()
         return;
     }
 
-    // Find frontiers
-    std::vector<int> frontier_indices = find_frontiers(*latest_map_);
-    RCLCPP_INFO(this->get_logger(), "Frontiers found: %zu", frontier_indices.size());
+    // Check if the robot is close to the current goal
+    if (navigation_in_progress_)
+    {
+        double distance_to_goal = std::hypot(
+            current_goal_.first - current_pose->pose.position.x,
+            current_goal_.second - current_pose->pose.position.y);
 
-    if (frontier_indices.empty())
+        if (distance_to_goal > frontier_visit_threshold_)
+        {
+            RCLCPP_INFO(this->get_logger(), "Robot is still moving towards the current goal.");
+            return;
+        }
+        else
+        {
+            RCLCPP_INFO(this->get_logger(), "Robot has reached the vicinity of the goal.");
+            navigation_in_progress_ = false;
+            visited_frontiers_.emplace_back(current_goal_);
+            RCLCPP_INFO(this->get_logger(), "Marked frontier at x: %.2f, y: %.2f as visited.",
+                        current_goal_.first, current_goal_.second);
+            current_goal_ = std::make_pair(0.0, 0.0);
+        }
+    }
+
+    // Find frontiers
+    auto frontiers = find_frontiers(*local_map);
+    RCLCPP_INFO(this->get_logger(), "Frontiers found: %zu", frontiers.size());
+
+    if (frontiers.empty())
     {
         RCLCPP_WARN(this->get_logger(), "No frontiers found. Exploration may be complete or map needs updating.");
         return;
     }
 
-    // Convert indices to coordinates
-    std::vector<std::pair<double, double>> frontier_coords = get_frontier_coords(frontier_indices);
+    // Get frontier centroids
+    auto frontier_coords = get_frontier_centroids(frontiers);
     if (frontier_coords.empty())
     {
         RCLCPP_DEBUG(this->get_logger(), "Failed to obtain frontier coordinates.");
@@ -257,7 +262,7 @@ void ExploreNode::exploration_cycle()
     }
 
     // Filter frontiers
-    std::vector<std::pair<double, double>> filtered_frontiers = filter_frontiers(frontier_coords);
+    auto filtered_frontiers = filter_frontiers(frontier_coords);
     RCLCPP_INFO(this->get_logger(), "Frontiers after filtering: %zu", filtered_frontiers.size());
 
     if (filtered_frontiers.empty())
@@ -313,13 +318,6 @@ void ExploreNode::send_goal(const geometry_msgs::msg::PoseStamped::SharedPtr goa
             switch (result.code) {
                 case rclcpp_action::ResultCode::SUCCEEDED:
                     RCLCPP_INFO(this->get_logger(), "Goal reached successfully!");
-                    if (current_goal_.first != 0.0 || current_goal_.second != 0.0)
-                    {
-                        visited_frontiers_.emplace_back(current_goal_);
-                        RCLCPP_INFO(this->get_logger(), "Marked frontier at x: %.2f, y: %.2f as visited.",
-                                    current_goal_.first, current_goal_.second);
-                        current_goal_ = std::make_pair(0.0, 0.0);
-                    }
                     break;
                 case rclcpp_action::ResultCode::ABORTED:
                     RCLCPP_WARN(this->get_logger(), "Goal was aborted.");
@@ -347,18 +345,16 @@ geometry_msgs::msg::PoseStamped::SharedPtr ExploreNode::get_current_pose()
     try
     {
         auto now = this->get_clock()->now();
-        // Wait for the transform to be available with a longer timeout
-        if (!tf_buffer_.canTransform("map", "base_link", now, rclcpp::Duration::from_seconds(2.0)))
+        if (!tf_buffer_.canTransform("map", "base_link", tf2::TimePointZero, tf2::durationFromSec(0.5)))
         {
-            RCLCPP_WARN(this->get_logger(), "Transform from 'map' to 'base_link' not available. Retrying...");
+            RCLCPP_WARN(this->get_logger(), "Transform from 'map' to 'base_link' not available.");
             return nullptr;
         }
 
         geometry_msgs::msg::TransformStamped transform = tf_buffer_.lookupTransform(
             "map",
             "base_link",
-            now,
-            rclcpp::Duration::from_seconds(1.0)
+            tf2::TimePointZero
         );
 
         current_pose->header = transform.header;
@@ -366,8 +362,6 @@ geometry_msgs::msg::PoseStamped::SharedPtr ExploreNode::get_current_pose()
         current_pose->pose.position.y = transform.transform.translation.y;
         current_pose->pose.position.z = transform.transform.translation.z;
         current_pose->pose.orientation = transform.transform.rotation;
-
-        RCLCPP_DEBUG(this->get_logger(), "Current pose: x=%.2f, y=%.2f", current_pose->pose.position.x, current_pose->pose.position.y);
     }
     catch (tf2::TransformException &ex)
     {
@@ -378,123 +372,158 @@ geometry_msgs::msg::PoseStamped::SharedPtr ExploreNode::get_current_pose()
     return current_pose;
 }
 
-// Corrected frontier detection function
-std::vector<int> ExploreNode::find_frontiers(const nav_msgs::msg::OccupancyGrid &map_data)
+// Frontier detection using BFS
+std::vector<std::vector<std::pair<int, int>>> ExploreNode::find_frontiers(const nav_msgs::msg::OccupancyGrid &map_data)
 {
     int width = map_data.info.width;
     int height = map_data.info.height;
     const std::vector<int8_t> &data = map_data.data;
 
-    std::vector<int> frontier_indices;
+    std::vector<std::vector<std::pair<int, int>>> frontiers;
+    std::vector<std::vector<bool>> visited(height, std::vector<bool>(width, false));
 
-    for (int y = 1; y < height -1; ++y)
+    auto isValid = [&](int x, int y) {
+        return x >= 0 && x < width && y >= 0 && y < height;
+    };
+
+    auto isFree = [&](int idx) {
+        return data[idx] >= 0 && data[idx] <= free_threshold_;
+    };
+
+    auto isUnknown = [&](int idx) {
+        return data[idx] == -1;
+    };
+
+    for (int y = 0; y < height; ++y)
     {
-        for (int x = 1; x < width -1; ++x)
+        for (int x = 0; x < width; ++x)
         {
-            int idx = y * width + x;
-            int cell = data[idx];
+            if (visited[y][x])
+                continue;
 
-            // Check if cell is free
-            if (cell >= 0 && cell <= free_threshold_)
+            int idx = y * width + x;
+            if (!isFree(idx))
+                continue;
+
+            bool isFrontierCell = false;
+            for (int dy = -1; dy <= 1; ++dy)
             {
-                // Check if any neighbor is unknown
-                bool is_frontier = false;
-                for (int dy = -1; dy <=1; ++dy)
+                for (int dx = -1; dx <= 1; ++dx)
                 {
-                    for (int dx = -1; dx <=1; ++dx)
+                    int nx = x + dx;
+                    int ny = y + dy;
+                    if (!isValid(nx, ny))
+                        continue;
+
+                    int n_idx = ny * width + nx;
+                    if (isUnknown(n_idx))
                     {
-                        if (dx == 0 && dy == 0)
-                            continue;
-                        int nidx = (y + dy) * width + (x + dx);
-                        int ncell = data[nidx];
-                        if (ncell == -1)
+                        isFrontierCell = true;
+                        break;
+                    }
+                }
+                if (isFrontierCell)
+                    break;
+            }
+
+            if (isFrontierCell)
+            {
+                // Start BFS
+                std::vector<std::pair<int, int>> frontier;
+                std::queue<std::pair<int, int>> q;
+                q.push({x, y});
+                visited[y][x] = true;
+
+                while (!q.empty())
+                {
+                    auto [cx, cy] = q.front();
+                    q.pop();
+                    frontier.push_back({cx, cy});
+
+                    for (int dy = -1; dy <= 1; ++dy)
+                    {
+                        for (int dx = -1; dx <= 1; ++dx)
                         {
-                            is_frontier = true;
-                            break;
+                            int nx = cx + dx;
+                            int ny = cy + dy;
+                            if (!isValid(nx, ny) || visited[ny][nx])
+                                continue;
+
+                            int n_idx = ny * width + nx;
+                            if (isFree(n_idx))
+                            {
+                                bool isFrontierNeighbor = false;
+                                for (int ddy = -1; ddy <= 1; ++ddy)
+                                {
+                                    for (int ddx = -1; ddx <= 1; ++ddx)
+                                    {
+                                        int nnx = nx + ddx;
+                                        int nny = ny + ddy;
+                                        if (!isValid(nnx, nny))
+                                            continue;
+
+                                        int nn_idx = nny * width + nnx;
+                                        if (isUnknown(nn_idx))
+                                        {
+                                            isFrontierNeighbor = true;
+                                            break;
+                                        }
+                                    }
+                                    if (isFrontierNeighbor)
+                                        break;
+                                }
+
+                                if (isFrontierNeighbor)
+                                {
+                                    q.push({nx, ny});
+                                    visited[ny][nx] = true;
+                                }
+                            }
                         }
                     }
-                    if (is_frontier)
-                        break;
                 }
-                if (is_frontier)
+
+                if (frontier.size() >= min_frontier_size_)
                 {
-                    frontier_indices.push_back(idx);
+                    frontiers.push_back(frontier);
                 }
             }
         }
     }
 
-    RCLCPP_INFO(this->get_logger(), "Frontiers found before filtering: %zu", frontier_indices.size());
-
-    // Now, we can cluster the frontier cells using connected components
-
-    // Create a binary image of frontier cells
-    cv::Mat frontier_image = cv::Mat::zeros(height, width, CV_8U);
-    for (const auto &idx : frontier_indices)
-    {
-        int y = idx / width;
-        int x = idx % width;
-        frontier_image.at<uint8_t>(y, x) = 255;
-    }
-
-    // Perform connected components
-    cv::Mat labels, stats, centroids;
-    int num_components = cv::connectedComponentsWithStats(frontier_image, labels, stats, centroids, 8, CV_32S);
-
-    std::vector<int> filtered_frontier_indices;
-
-    for (int i = 1; i < num_components; ++i)
-    {
-        int size = stats.at<int>(i, cv::CC_STAT_AREA);
-        if (size >= min_frontier_size_)
-        {
-            for (int y = 0; y < height; ++y)
-            {
-                for (int x = 0; x < width; ++x)
-                {
-                    if (labels.at<int>(y, x) == i)
-                    {
-                        int idx = y * width + x;
-                        filtered_frontier_indices.push_back(idx);
-                    }
-                }
-            }
-        }
-    }
-
-    RCLCPP_INFO(this->get_logger(), "Frontiers found after filtering: %zu", filtered_frontier_indices.size());
-
-    return filtered_frontier_indices;
+    RCLCPP_INFO(this->get_logger(), "Frontiers found after BFS: %zu", frontiers.size());
+    return frontiers;
 }
 
-// Function to convert frontier indices to coordinates
-std::vector<std::pair<double, double>> ExploreNode::get_frontier_coords(const std::vector<int> &frontier_indices)
+// Function to get frontier centroids
+std::vector<std::pair<double, double>> ExploreNode::get_frontier_centroids(const std::vector<std::vector<std::pair<int, int>>> &frontiers)
 {
-    std::vector<std::pair<double, double>> frontier_coords;
-
-    if(frontier_indices.empty())
-        return frontier_coords;
-
+    std::vector<std::pair<double, double>> centroids;
     int width = latest_map_->info.width;
     double resolution = latest_map_->info.resolution;
     double origin_x = latest_map_->info.origin.position.x;
     double origin_y = latest_map_->info.origin.position.y;
 
-    frontier_coords.reserve(frontier_indices.size());
-
-    for(auto idx : frontier_indices)
+    for (const auto &frontier : frontiers)
     {
-        int row = idx / width;
-        int col = idx % width;
+        // Calculate centroid
+        double sum_x = 0.0, sum_y = 0.0;
+        for (const auto &[x, y] : frontier)
+        {
+            sum_x += x;
+            sum_y += y;
+        }
+        double avg_x = sum_x / frontier.size();
+        double avg_y = sum_y / frontier.size();
 
-        double x = (col * resolution) + origin_x + (resolution / 2.0);
-        double y = (row * resolution) + origin_y + (resolution / 2.0);
+        // Convert to world coordinates
+        double wx = (avg_x + 0.5) * resolution + origin_x;
+        double wy = (avg_y + 0.5) * resolution + origin_y;
 
-        frontier_coords.emplace_back(std::make_pair(x, y));
+        centroids.push_back({wx, wy});
     }
 
-    RCLCPP_DEBUG(this->get_logger(), "Converted %zu frontiers to coordinates.", frontier_coords.size());
-    return frontier_coords;
+    return centroids;
 }
 
 // Function to publish frontiers as markers for RViz
@@ -515,9 +544,9 @@ void ExploreNode::publish_frontiers(const std::vector<std::pair<double, double>>
         marker.pose.position.y = coord.second;
         marker.pose.position.z = 0.0;
         marker.pose.orientation.w = 1.0;
-        marker.scale.x = 0.05;
-        marker.scale.y = 0.05;
-        marker.scale.z = 0.05;
+        marker.scale.x = 0.1;
+        marker.scale.y = 0.1;
+        marker.scale.z = 0.1;
         marker.color.a = 1.0;
         marker.color.r = 1.0; // Red color for frontiers
         marker.color.g = 0.0;
@@ -571,7 +600,9 @@ bool ExploreNode::is_frontier_visited(const std::pair<double, double> &coord)
 }
 
 // Function to select the best frontier based on information gain and distance
-std::pair<double, double> ExploreNode::select_frontier(const std::vector<std::pair<double, double>> &frontier_coords, const geometry_msgs::msg::PoseStamped &current_pose)
+std::pair<double, double> ExploreNode::select_frontier(
+    const std::vector<std::pair<double, double>> &frontier_coords,
+    const geometry_msgs::msg::PoseStamped &current_pose)
 {
     if(frontier_coords.empty())
         return std::make_pair(0.0, 0.0);
@@ -579,11 +610,15 @@ std::pair<double, double> ExploreNode::select_frontier(const std::vector<std::pa
     std::vector<double> scores;
     scores.reserve(frontier_coords.size());
 
+    double alpha = 1.0; // Weight for information gain
+    double beta = 0.5;  // Weight for distance (adjust as needed)
+
     for(const auto &coord : frontier_coords)
     {
         double info_gain = information_gain(coord, info_radius_);
-        double distance = std::hypot(coord.first - current_pose.pose.position.x, coord.second - current_pose.pose.position.y);
-        double score = info_gain / (distance + 1e-6); // Avoid division by zero
+        double distance = std::hypot(coord.first - current_pose.pose.position.x,
+                                     coord.second - current_pose.pose.position.y);
+        double score = alpha * info_gain - beta * distance;
         scores.push_back(score);
     }
 
@@ -615,22 +650,19 @@ double ExploreNode::information_gain(const std::pair<double, double> &coord, dou
     double origin_x = map_data.info.origin.position.x;
     double origin_y = map_data.info.origin.position.y;
 
-    // Convert coordinates to grid indices
     int center_x = static_cast<int>((coord.first - origin_x) / resolution);
     int center_y = static_cast<int>((coord.second - origin_y) / resolution);
     int radius_cells = static_cast<int>(radius / resolution);
 
-    // Define window boundaries
     int x_min = std::max(0, center_x - radius_cells);
-    int x_max = std::min(width, center_x + radius_cells);
+    int x_max = std::min(width - 1, center_x + radius_cells);
     int y_min = std::max(0, center_y - radius_cells);
-    int y_max = std::min(height, center_y + radius_cells);
+    int y_max = std::min(height - 1, center_y + radius_cells);
 
-    // Count unknown cells in the radius
     int unknown_cells = 0;
-    for(int y = y_min; y < y_max; ++y)
+    for(int y = y_min; y <= y_max; ++y)
     {
-        for(int x = x_min; x < x_max; ++x)
+        for(int x = x_min; x <= x_max; ++x)
         {
             int idx = y * width + x;
             if(map_data.data[idx] == -1)
@@ -638,10 +670,7 @@ double ExploreNode::information_gain(const std::pair<double, double> &coord, dou
         }
     }
 
-    double info_gain = unknown_cells * (resolution * resolution);
-
-    RCLCPP_DEBUG(this->get_logger(), "Information gain for frontier at x: %.2f, y: %.2f is %.2f", coord.first, coord.second, info_gain);
-    return info_gain;
+    return unknown_cells * resolution * resolution;
 }
 
 // Function to validate the goal position

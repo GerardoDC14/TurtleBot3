@@ -2674,3 +2674,8 @@
 2024-11-03 04:29:15,703:WARNING:Hand 1 out of ROI: X: 356, Y: 57
 2024-11-03 04:29:15,806:WARNING:Hand 1 out of ROI: X: 361, Y: 52
 2024-11-03 04:29:15,910:WARNING:Hand 1 out of ROI: X: 372, Y: 54
+2024-11-14 01:03:41,250:INFO:Serial port initialized successfully.
+2024-11-14 01:03:44,423:INFO:ZED camera initialized successfully.
+2024-11-14 01:03:44,427:INFO:Second camera initialized successfully.
+2024-11-14 01:03:47,674:INFO:Resources released successfully.
+2024-11-14 01:03:47,680:INFO:Resources released successfully.

@@ -1,0 +1,31 @@
+[35m[1mConsolidate compiler generated dependencies of target explore_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/explore_node.dir/src/explore_node.cpp.o[0m
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::vector<std::pair<int, int> > > ExploreNode::find_frontiers(const OccupancyGrid&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:476:37:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<std::pair<int, int> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  476 |                 if ([01;35m[Kfrontier.size() >= min_frontier_size_[m[K)
+      |                     [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<double, double> > ExploreNode::get_frontier_centroids(const std::vector<std::vector<std::pair<int, int> > >&)[m[K’:
+[01m[K/home/gerardo/turtlebot3_group6v2/src/explore_cpp/src/explore_node.cpp:492:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kwidth[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  492 |     int [01;35m[Kwidth[m[K = latest_map_->info.width;
+      |         [01;35m[K^~~~~[m[K
+[100%] [32m[1mLinking CXX executable explore_node[0m
+[100%] Built target explore_node
+-- Install configuration: ""
+-- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/lib/explore_cpp/explore_node
+-- Set runtime path of "/home/gerardo/turtlebot3_group6v2/install/explore_cpp/lib/explore_cpp/explore_node" to ""
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/package.xml
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/ament_index/resource_index/package_run_dependencies/explore_cpp
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/ament_index/resource_index/parent_prefix_path/explore_cpp
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/ament_prefix_path.sh
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/path.sh
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/environment/path.dsv
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.bash
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.sh
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.zsh
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/local_setup.dsv
+-- Installing: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/package.dsv
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/ament_index/resource_index/packages/explore_cpp
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/cmake/explore_cppConfig.cmake
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/cmake/explore_cppConfig-version.cmake
+-- Up-to-date: /home/gerardo/turtlebot3_group6v2/install/explore_cpp/share/explore_cpp/package.xml

@@ -1,0 +1,22 @@
+[1.654s] Invoking command in '/home/gerardo/turtlebot3_group6v2/src/HAZMAT_Detection/camara': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/camara/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/camara/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/camara build --build-base /home/gerardo/turtlebot3_group6v2/build/camara/build install --record /home/gerardo/turtlebot3_group6v2/build/camara/install.log --single-version-externally-managed install_data
+[1.885s] running egg_info
+[1.886s] writing ../../../build/camara/camara.egg-info/PKG-INFO
+[1.886s] writing dependency_links to ../../../build/camara/camara.egg-info/dependency_links.txt
+[1.886s] writing entry points to ../../../build/camara/camara.egg-info/entry_points.txt
+[1.886s] writing requirements to ../../../build/camara/camara.egg-info/requires.txt
+[1.886s] writing top-level names to ../../../build/camara/camara.egg-info/top_level.txt
+[1.888s] reading manifest file '../../../build/camara/camara.egg-info/SOURCES.txt'
+[1.888s] writing manifest file '../../../build/camara/camara.egg-info/SOURCES.txt'
+[1.888s] running build
+[1.888s] running build_py
+[1.888s] running install
+[1.890s] running install_lib
+[1.891s] running install_data
+[1.891s] running install_egg_info
+[1.892s] removing '/home/gerardo/turtlebot3_group6v2/install/camara/lib/python3.10/site-packages/camara-0.0.0-py3.10.egg-info' (and everything under it)
+[1.893s] Copying ../../../build/camara/camara.egg-info to /home/gerardo/turtlebot3_group6v2/install/camara/lib/python3.10/site-packages/camara-0.0.0-py3.10.egg-info
+[1.893s] running install_scripts
+[1.914s] Installing camara_client script to /home/gerardo/turtlebot3_group6v2/install/camara/lib/camara
+[1.914s] Installing camara_server script to /home/gerardo/turtlebot3_group6v2/install/camara/lib/camara
+[1.915s] writing list of installed files to '/home/gerardo/turtlebot3_group6v2/build/camara/install.log'
+[1.954s] Invoked command in '/home/gerardo/turtlebot3_group6v2/src/HAZMAT_Detection/camara' returned '0': PYTHONPATH=/home/gerardo/turtlebot3_group6v2/build/camara/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gerardo/turtlebot3_group6v2/install/camara/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/camara build --build-base /home/gerardo/turtlebot3_group6v2/build/camara/build install --record /home/gerardo/turtlebot3_group6v2/build/camara/install.log --single-version-externally-managed install_data

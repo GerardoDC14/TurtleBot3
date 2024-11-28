@@ -683,12 +683,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/navigate_to_pose.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp \
@@ -713,12 +707,14 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/mesh_file__struct.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__builder.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__traits.hpp \
@@ -748,8 +744,10 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/velocity_stamped.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
   /opt/ros/humble/include/tf2/tf2/buffer_core_interface.h \
   /opt/ros/humble/include/tf2/tf2/time.h \
   /opt/ros/humble/include/tf2/tf2/exceptions.h \
@@ -876,127 +874,12 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
   /opt/ros/humble/include/rcl_action/rcl_action/goal_state_machine.h \
   /opt/ros/humble/include/rclcpp_action/rclcpp_action/server.hpp \
   /opt/ros/humble/include/rclcpp_action/rclcpp_action/server_goal_handle.hpp \
-  /usr/include/opencv4/opencv2/opencv.hpp \
-  /usr/include/opencv4/opencv2/opencv_modules.hpp \
-  /usr/include/opencv4/opencv2/core.hpp \
-  /usr/include/opencv4/opencv2/core/cvdef.h \
-  /usr/include/opencv4/opencv2/core/version.hpp \
-  /usr/include/opencv4/opencv2/core/hal/interface.h \
-  /usr/include/c++/11/cstddef \
-  /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  /usr/include/opencv4/opencv2/core/base.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
-  /usr/include/opencv4/opencv2/core/neon_utils.hpp \
-  /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
-  /usr/include/opencv4/opencv2/core/check.hpp \
-  /usr/include/opencv4/opencv2/core/traits.hpp \
-  /usr/include/opencv4/opencv2/core/matx.hpp \
-  /usr/include/opencv4/opencv2/core/saturate.hpp \
-  /usr/include/opencv4/opencv2/core/fast_math.hpp \
-  /usr/include/opencv4/opencv2/core/types.hpp \
-  /usr/include/opencv4/opencv2/core/mat.hpp \
-  /usr/include/opencv4/opencv2/core/bufferpool.hpp \
-  /usr/include/opencv4/opencv2/core/mat.inl.hpp \
-  /usr/include/opencv4/opencv2/core/persistence.hpp \
-  /usr/include/opencv4/opencv2/core/operations.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
-  /usr/include/c++/11/complex \
-  /usr/include/opencv4/opencv2/core/utility.hpp \
-  /usr/include/opencv4/opencv2/core/optim.hpp \
-  /usr/include/opencv4/opencv2/core/ovx.hpp \
-  /usr/include/opencv4/opencv2/core/cvdef.h \
-  /usr/include/opencv4/opencv2/calib3d.hpp \
-  /usr/include/opencv4/opencv2/features2d.hpp \
-  /usr/include/opencv4/opencv2/flann/miniflann.hpp \
-  /usr/include/opencv4/opencv2/flann/defines.h \
-  /usr/include/opencv4/opencv2/flann/config.h \
-  /usr/include/opencv4/opencv2/core/affine.hpp \
-  /usr/include/opencv4/opencv2/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/include/opencv4/opencv2/core/async.hpp \
-  /usr/include/opencv4/opencv2/dnn/version.hpp \
-  /usr/include/opencv4/opencv2/dnn/dict.hpp \
-  /usr/include/opencv4/opencv2/dnn/layer.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
-  /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/include/opencv4/opencv2/flann.hpp \
-  /usr/include/opencv4/opencv2/flann/flann_base.hpp \
-  /usr/include/opencv4/opencv2/flann/general.h \
-  /usr/include/opencv4/opencv2/flann/matrix.h \
-  /usr/include/opencv4/opencv2/flann/params.h \
-  /usr/include/opencv4/opencv2/flann/any.h \
-  /usr/include/opencv4/opencv2/flann/defines.h \
-  /usr/include/opencv4/opencv2/flann/saving.h \
-  /usr/include/opencv4/opencv2/flann/nn_index.h \
-  /usr/include/opencv4/opencv2/flann/result_set.h \
-  /usr/include/opencv4/opencv2/flann/all_indices.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_index.h \
-  /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
-  /usr/include/opencv4/opencv2/flann/dist.h \
-  /usr/include/opencv4/opencv2/flann/heap.h \
-  /usr/include/opencv4/opencv2/flann/allocator.h \
-  /usr/include/opencv4/opencv2/flann/random.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
-  /usr/include/opencv4/opencv2/flann/kmeans_index.h \
-  /usr/include/opencv4/opencv2/flann/logger.h \
-  /usr/include/opencv4/opencv2/flann/composite_index.h \
-  /usr/include/opencv4/opencv2/flann/linear_index.h \
-  /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
-  /usr/include/opencv4/opencv2/flann/lsh_index.h \
-  /usr/include/opencv4/opencv2/flann/lsh_table.h \
-  /usr/include/opencv4/opencv2/flann/autotuned_index.h \
-  /usr/include/opencv4/opencv2/flann/ground_truth.h \
-  /usr/include/opencv4/opencv2/flann/index_testing.h \
-  /usr/include/opencv4/opencv2/flann/timer.h \
-  /usr/include/opencv4/opencv2/flann/sampling.h \
-  /usr/include/opencv4/opencv2/highgui.hpp \
-  /usr/include/opencv4/opencv2/imgcodecs.hpp \
-  /usr/include/opencv4/opencv2/videoio.hpp \
-  /usr/include/opencv4/opencv2/imgproc.hpp \
-  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /usr/include/opencv4/opencv2/ml.hpp \
-  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
-  /usr/include/opencv4/opencv2/objdetect.hpp \
-  /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
-  /usr/include/opencv4/opencv2/objdetect/face.hpp \
-  /usr/include/opencv4/opencv2/photo.hpp \
-  /usr/include/opencv4/opencv2/stitching.hpp \
-  /usr/include/opencv4/opencv2/stitching/warpers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.hpp \
-  /usr/include/opencv4/opencv2/core/cuda_types.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/bits/stl_deque.h \
   /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/bits/stl_queue.h \
-  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/include/opencv4/opencv2/video.hpp \
-  /usr/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/include/c++/11/bits/stl_queue.h
 
-
-/usr/include/opencv4/opencv2/video/background_segm.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp:
 
 /usr/include/c++/11/bits/stl_queue.h:
 
@@ -1008,93 +891,7 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/queue:
 
-/usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/matchers.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
-
-/usr/include/opencv4/opencv2/core/cuda.hpp:
-
-/usr/include/opencv4/opencv2/stitching.hpp:
-
-/usr/include/opencv4/opencv2/objdetect/face.hpp:
-
-/usr/include/opencv4/opencv2/ml/ml.inl.hpp:
-
-/usr/include/opencv4/opencv2/imgproc/segmentation.hpp:
-
-/usr/include/opencv4/opencv2/videoio.hpp:
-
-/usr/include/opencv4/opencv2/imgcodecs.hpp:
-
-/usr/include/opencv4/opencv2/highgui.hpp:
-
-/usr/include/opencv4/opencv2/flann/sampling.h:
-
-/usr/include/opencv4/opencv2/flann/index_testing.h:
-
-/usr/include/opencv4/opencv2/flann/linear_index.h:
-
-/usr/include/opencv4/opencv2/flann/logger.h:
-
-/usr/include/opencv4/opencv2/flann/kdtree_single_index.h:
-
-/usr/include/opencv4/opencv2/flann/heap.h:
-
-/usr/include/opencv4/opencv2/flann/all_indices.h:
-
-/usr/include/opencv4/opencv2/flann/any.h:
-
-/usr/include/opencv4/opencv2/flann/matrix.h:
-
-/usr/include/opencv4/opencv2/flann.hpp:
-
-/usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp:
-
-/usr/include/opencv4/opencv2/dnn/dnn.inl.hpp:
-
-/usr/include/opencv4/opencv2/dnn/layer.hpp:
-
-/usr/include/opencv4/opencv2/core/async.hpp:
-
-/usr/include/opencv4/opencv2/dnn/dnn.hpp:
-
-/usr/include/opencv4/opencv2/flann/config.h:
-
-/usr/include/opencv4/opencv2/flann/defines.h:
-
-/usr/include/opencv4/opencv2/features2d.hpp:
-
-/usr/include/opencv4/opencv2/core/optim.hpp:
-
-/usr/include/opencv4/opencv2/core/cvstd.inl.hpp:
-
-/usr/include/opencv4/opencv2/core/mat.inl.hpp:
-
-/usr/include/opencv4/opencv2/core/mat.hpp:
-
-/usr/include/opencv4/opencv2/core/matx.hpp:
-
-/usr/include/opencv4/opencv2/core/traits.hpp:
-
-/usr/include/opencv4/opencv2/core/vsx_utils.hpp:
-
-/usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
-
-/usr/include/opencv4/opencv2/core/cvstd.hpp:
-
-/usr/include/opencv4/opencv2/core/base.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
-
-/usr/include/opencv4/opencv2/core.hpp:
-
-/usr/include/opencv4/opencv2/opencv.hpp:
-
 /opt/ros/humble/include/rclcpp_action/rclcpp_action/server.hpp:
-
-/usr/include/opencv4/opencv2/dnn/version.hpp:
 
 /opt/ros/humble/include/rcl_action/rcl_action/action_server.h:
 
@@ -1126,8 +923,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__struct.h:
 
-/usr/include/opencv4/opencv2/video/tracking.hpp:
-
 /opt/ros/humble/include/action_msgs/action_msgs/msg/goal_status_array.h:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status__functions.h:
@@ -1135,8 +930,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/action_msgs/action_msgs/msg/goal_status.h:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
-
-/usr/include/opencv4/opencv2/core/neon_utils.hpp:
 
 /opt/ros/humble/include/rcl_action/rcl_action/visibility_control.h:
 
@@ -1151,8 +944,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /usr/include/kdl/frames.inl:
 
 /usr/include/kdl/utilities/kdl-config.h:
-
-/usr/include/c++/11/cstddef:
 
 /usr/include/kdl/frames.hpp:
 
@@ -1180,8 +971,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
-
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose.hpp:
@@ -1189,8 +978,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__builder.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp:
-
-/usr/include/opencv4/opencv2/core/version.hpp:
 
 /opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:
 
@@ -1207,8 +994,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/tf2/tf2/convert.h:
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:
-
-/usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
 
 /opt/ros/humble/include/rclcpp_action/rclcpp_action/client_goal_handle.hpp:
 
@@ -1238,9 +1023,7 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp:
 
-/usr/include/opencv4/opencv2/flann/dist.h:
-
-/usr/include/opencv4/opencv2/core/persistence.hpp:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__traits.hpp:
 
@@ -1251,8 +1034,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:
 
 /opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.h:
-
-/usr/include/opencv4/opencv2/dnn/dict.hpp:
 
 /opt/ros/humble/include/tf2/tf2/LinearMath/MinMax.h:
 
@@ -1278,8 +1059,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__builder.hpp:
 
-/usr/include/opencv4/opencv2/core/affine.hpp:
-
 /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.h:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status__traits.hpp:
@@ -1292,11 +1071,7 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__traits.hpp:
 
-/usr/include/opencv4/opencv2/stitching/detail/util.hpp:
-
 /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__builder.hpp:
-
-/usr/include/opencv4/opencv2/flann/saving.h:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_info__struct.hpp:
 
@@ -1307,8 +1082,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.hpp:
 
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/navigate_to_pose.hpp:
-
-/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp:
 
@@ -1339,8 +1112,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/static_storage.hpp:
-
-/usr/include/opencv4/opencv2/core/utility.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
@@ -1384,8 +1155,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
 
-/usr/include/opencv4/opencv2/opencv_modules.hpp:
-
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__builder.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
@@ -1428,8 +1197,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
 
-/usr/include/opencv4/opencv2/ml.hpp:
-
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__builder.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
@@ -1456,19 +1223,13 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
 
-/usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
-
 /opt/ros/humble/include/rcutils/rcutils/shared_library.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/shared_library.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
 
-/usr/include/opencv4/opencv2/core/types.hpp:
-
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
-
-/usr/include/opencv4/opencv2/flann/kmeans_index.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
 
@@ -1485,8 +1246,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/action_msgs/action_msgs/srv/cancel_goal.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp:
-
-/usr/include/opencv4/opencv2/photo.hpp:
 
 /opt/ros/humble/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__struct.hpp:
 
@@ -1517,8 +1276,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/opencv4/opencv2/flann/params.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -1572,8 +1329,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/stdio.h:
 
-/usr/include/opencv4/opencv2/core/cuda_types.hpp:
-
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
 
 /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/map_meta_data__traits.hpp:
@@ -1610,15 +1365,11 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/iomanip:
 
-/usr/include/opencv4/opencv2/flann/lsh_index.h:
-
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
@@ -1643,8 +1394,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__builder.hpp:
 
 /usr/include/asm-generic/errno-base.h:
-
-/usr/include/opencv4/opencv2/flann/general.h:
 
 /opt/ros/humble/include/rmw/rmw/subscription_options.h:
 
@@ -1696,8 +1445,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp:
-
 /usr/include/c++/11/cstdio:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
@@ -1708,8 +1455,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
-/usr/include/opencv4/opencv2/calib3d.hpp:
-
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
@@ -1719,8 +1464,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/rmw/rmw/init.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
-
-/usr/include/opencv4/opencv2/flann/dynamic_bitset.h:
 
 /opt/ros/humble/include/rmw/rmw/publisher_options.h:
 
@@ -1778,13 +1521,9 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_deleter.hpp:
 
-/usr/include/opencv4/opencv2/imgproc.hpp:
-
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/opencv4/opencv2/flann/miniflann.hpp:
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
@@ -1882,13 +1621,9 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
 
-/usr/include/opencv4/opencv2/core/fast_math.hpp:
-
 /usr/include/locale.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:
-
-/usr/include/opencv4/opencv2/flann/nn_index.h:
 
 /opt/ros/humble/include/rcl_action/rcl_action/goal_handle.h:
 
@@ -1936,8 +1671,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/usr/include/opencv4/opencv2/core/check.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
@@ -1954,8 +1687,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/ctime:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
-
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -1963,8 +1694,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
-/usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__struct.hpp:
 
@@ -2004,13 +1733,9 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/bits/stl_construct.h:
 
-/usr/include/opencv4/opencv2/flann/allocator.h:
-
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
-
-/usr/include/opencv4/opencv2/flann/lsh_table.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
@@ -2023,8 +1748,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
 
 /usr/include/features.h:
-
-/usr/include/opencv4/opencv2/core/cuda.inl.hpp:
 
 /usr/include/c++/11/bits/atomic_base.h:
 
@@ -2092,15 +1815,11 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/bits/predefined_ops.h:
 
-/usr/include/opencv4/opencv2/core/saturate.hpp:
-
 /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:
 
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/c++/11/bits/memoryfwd.h:
-
-/usr/include/opencv4/opencv2/core/operations.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -2123,10 +1842,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/rcpputils/rcpputils/join.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/opencv4/opencv2/dnn.hpp:
-
-/usr/include/opencv4/opencv2/core/hal/interface.h:
 
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/navigate_to_pose__struct.hpp:
 
@@ -2190,15 +1905,9 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/new:
 
-/usr/include/opencv4/opencv2/core/cvdef.h:
-
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__traits.hpp:
 
 /usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/opencv4/opencv2/flann/autotuned_index.h:
-
-/usr/include/opencv4/opencv2/flann/random.h:
 
 /opt/ros/humble/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:
 
@@ -2252,8 +1961,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
 
-/usr/include/opencv4/opencv2/stitching/warpers.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/c++/11/cwchar:
@@ -2281,8 +1988,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /usr/include/c++/11/bits/atomic_futex.h:
 
 /usr/include/c++/11/cstring:
-
-/usr/include/opencv4/opencv2/flann/flann_base.hpp:
 
 /usr/include/c++/11/bits/charconv.h:
 
@@ -2338,8 +2043,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp:
 
-/usr/include/opencv4/opencv2/objdetect.hpp:
-
 /usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -2360,8 +2063,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/ostream:
 
-/usr/include/opencv4/opencv2/stitching/detail/camera.hpp:
-
 /usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
@@ -2380,8 +2081,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rmw/rmw/subscription_content_filter_options.h:
 
-/usr/include/opencv4/opencv2/flann/result_set.h:
-
 /opt/ros/humble/include/rcutils/rcutils/types/string_map.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
@@ -2398,13 +2097,9 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/bits/istream.tcc:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
-
 /usr/include/c++/11/list:
 
 /usr/include/c++/11/bits/stl_list.h:
-
-/usr/include/opencv4/opencv2/flann/kdtree_index.h:
 
 /opt/ros/humble/include/nav_msgs/nav_msgs/msg/occupancy_grid.hpp:
 
@@ -2470,11 +2165,7 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rmw/rmw/macros.h:
 
-/usr/include/opencv4/opencv2/flann/ground_truth.h:
-
 /usr/include/c++/11/bits/stream_iterator.h:
-
-/usr/include/opencv4/opencv2/flann/timer.h:
 
 /opt/ros/humble/include/rcl/rcl/log_level.h:
 
@@ -2598,8 +2289,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rcl/rcl/node.h:
 
-/usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp:
-
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:
 
 /opt/ros/humble/include/rcl/rcl/node_options.h:
@@ -2625,8 +2314,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /opt/ros/humble/include/action_msgs/action_msgs/msg/goal_info.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
-
-/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
 
@@ -2760,8 +2447,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 
-/usr/include/opencv4/opencv2/flann/composite_index.h:
-
 /usr/include/c++/11/bits/basic_ios.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
@@ -2816,8 +2501,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rclcpp/rclcpp/any_service_callback.hpp:
 
-/usr/include/c++/11/complex:
-
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /opt/ros/humble/include/tracetools/tracetools/utils.hpp:
@@ -2854,8 +2537,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
 
-/usr/include/opencv4/opencv2/video.hpp:
-
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
@@ -2880,8 +2561,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
 
-/usr/include/opencv4/opencv2/core/bufferpool.hpp:
-
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp:
 
 /opt/ros/humble/include/rmw/rmw/qos_profiles.h:
@@ -2901,8 +2580,6 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/opencv4/opencv2/core/ovx.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -2928,11 +2605,7 @@ CMakeFiles/explore_node.dir/src/explore_node.cpp.o: /home/gerardo/turtlebot3_gro
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
-/usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h:
-
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
-
-/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
 
