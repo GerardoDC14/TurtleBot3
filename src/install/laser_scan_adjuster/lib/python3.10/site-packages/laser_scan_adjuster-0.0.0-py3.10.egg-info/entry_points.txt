@@ -1,3 +1,0 @@
-[console_scripts]
-adjust_scan = laser_scan_adjuster.adjust_scan:main
-

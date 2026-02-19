@@ -1,3 +1,0 @@
-[console_scripts]
-explore = turtlebot3_explore.explore:main
-

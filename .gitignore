@@ -1,0 +1,20 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+src/build/
+src/install/
+src/log/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment and local tooling
+.env
+.venv/
+.idea/
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
