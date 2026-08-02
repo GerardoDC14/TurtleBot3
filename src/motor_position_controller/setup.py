@@ -1,27 +1,32 @@
 from setuptools import setup
 
-package_name = 'motor_position_controller'
+package_name = "motor_position_controller"
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version="0.1.0",
     packages=[package_name],
-    py_modules=[],
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
+        (
+            "share/ament_index/resource_index/packages",
+            ["resource/" + package_name],
+        ),
+        ("share/" + package_name, ["package.xml"]),
     ],
-    install_requires=['setuptools'],
+    install_requires=["setuptools"],
     zip_safe=True,
-    maintainer='gerardo',
-    maintainer_email='gerardo@example.com',
-    description='A package for controlling motor positions.',
-    license='Apache License 2.0',
-    tests_require=['pytest'],
+    maintainer="Gerardo Escobar",
+    maintainer_email="123440177+GerardoDC14@users.noreply.github.com",
+    description=(
+        "Interactive ROS 2 command publisher for bounded two-axis "
+        "custom-mechanism position references."
+    ),
+    license="All rights reserved",
+    tests_require=["pytest"],
     entry_points={
-        'console_scripts': [
-            'motor_position_controller = motor_position_controller_node:main',
+        "console_scripts": [
+            "motor_position_controller = "
+            "motor_position_controller.motor_position_controller_node:main",
         ],
     },
 )

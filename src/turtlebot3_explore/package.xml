@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>turtlebot3_explore</name>
-  <version>0.0.1</version>
-  <description>Nodo de ROS2 para la exploración autónoma de un robot móvil utilizando Nav2 y SLAM Toolbox.</description>
-  <maintainer email="tu_email@example.com">Tu Nombre</maintainer>
+  <version>0.1.0</version>
+  <description>Python frontier-exploration mission node using occupancy-grid processing, TF and Nav2 goal execution.</description>
+  <maintainer email="123440177+GerardoDC14@users.noreply.github.com">Gerardo Escobar</maintainer>
   <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
@@ -14,9 +14,11 @@
   <depend>visualization_msgs</depend>
   <depend>tf2_ros</depend>
   <depend>nav2_simple_commander</depend>
-  <depend>sklearn</depend>
 
   <exec_depend>python3</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <exec_depend>python3-sklearn</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>

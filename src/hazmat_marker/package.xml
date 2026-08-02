@@ -2,11 +2,10 @@
 <package format="3">
   <name>hazmat_marker</name>
   <version>0.1.0</version>
-  <description>Package to mark detected hazmat locations on the map in RViz</description>
-  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <description>ROS 2 mission-annotation package for publishing detected HAZMAT locations as RViz map markers.</description>
+  <maintainer email="123440177+GerardoDC14@users.noreply.github.com">Gerardo Escobar</maintainer>
   <license>Apache License 2.0</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_python</buildtool_depend>
 
   <depend>rclpy</depend>
@@ -21,4 +20,3 @@
     <build_type>ament_python</build_type>
   </export>
 </package>
-

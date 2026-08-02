@@ -1,30 +1,31 @@
 from setuptools import setup
-import os
-from glob import glob
 
-package_name = 'turtlebot3_poi_navigation'
+package_name = "turtlebot3_poi_navigation"
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version="0.1.0",
     packages=[package_name],
     data_files=[
-        # Install the package.xml
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
-        # Include package.xml in the share directory
-        ('share/' + package_name, ['package.xml']),
+        (
+            "share/ament_index/resource_index/packages",
+            ["resource/" + package_name],
+        ),
+        ("share/" + package_name, ["package.xml"]),
     ],
-    install_requires=['setuptools','PyYAML'],
+    install_requires=["setuptools", "PyYAML"],
     zip_safe=True,
-    maintainer='Your Name',
-    maintainer_email='your.email@example.com',
-    description='Package for navigating to Points of Interest',
-    license='License Declaration',
-    tests_require=['pytest'],
+    maintainer="Gerardo Escobar",
+    maintainer_email="123440177+GerardoDC14@users.noreply.github.com",
+    description=(
+        "Interactive ROS 2 point-of-interest manager for storing named goals "
+        "and dispatching Nav2 missions."
+    ),
+    license="All rights reserved",
+    tests_require=["pytest"],
     entry_points={
-        'console_scripts': [
-            'poi_manager = turtlebot3_poi_navigation.poi_manager:main',
+        "console_scripts": [
+            "poi_manager = turtlebot3_poi_navigation.poi_manager:main",
         ],
     },
 )

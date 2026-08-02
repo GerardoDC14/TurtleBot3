@@ -2,16 +2,17 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>joint_state_publisher_custom</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="gerardo@todo.todo">gerardo</maintainer>
-  <license>TODO: License declaration</license>
+  <version>0.1.0</version>
+  <description>Custom ROS 2 joint-state publisher for visualizing the parallel mechanism attached to the TurtleBot3 platform.</description>
+  <maintainer email="123440177+GerardoDC14@users.noreply.github.com">Gerardo Escobar</maintainer>
+  <license>All rights reserved</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
 
-  <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
