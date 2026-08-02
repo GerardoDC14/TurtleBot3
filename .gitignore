@@ -6,15 +6,26 @@ src/build/
 src/install/
 src/log/
 
-# Python cache
+# ROS bags and runtime data
+rosbag2_*/
+*.db3
+*.mcap
+
+# Python cache and test tooling
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Environment and local tooling
 .env
 .venv/
 .idea/
+.vscode/
 
-# OS/editor noise
+# Editor and OS noise
+*.swp
+*.swo
 Thumbs.db
 .DS_Store
